@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kalkulator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous" />
+  </head>
+  <body>
+    <div class="container">
+      <h5>perhitungan aritmatika dengan javascript</h5>
+      <br />
+      <div id="masukan">
+        <input type="text" id="nilai"/>
+        <br>
+        <br>
+      </div>
+      <div id="operator">
+        <button type="button" class="btn btn-danger" onclick="kosong()">clear</button>
+      </div>
+
+      <div id="angka">
+        <br>
+        <input type="button" name="satu" value=" 1 " onclick="nilai.value +='1'">
+        <input type="button" name="dua" value=" 2 " onclick="nilai.value +='2'">
+        <input type="button" name="tiga" value=" 3 " onclick="nilai.value +='3'">
+        <input type="button" name="plus" class="btn btn-primary" value="+" onclick="nilai.value +='+'">
+        <br>
+        <input type="button" name="empat" value=" 4 " onclick="nilai.value +='4'">
+        <input type="button" name="lima" value=" 5 " onclick="nilai.value +='5'">
+        <input type="button" name="enam" value=" 6 " onclick="nilai.value +='6'">
+        <input type="button" name="minus" class="btn btn-success" value="-" onclick="nilai.value +='-'">
+        <br>
+        <input type="button" name="nol" value=" 0 " onclick="nilai.value +='0'">
+        <input type="button" name="koma" value=" , " onclick="nilai.value +=','">
+        <input type="button" name="bagi" class="btn btn-warning" value="/" onclick="nilai.value +='/'">
+        <input type="button" name="samadengan" value=" = " onclick="nilai.value = eval(nilai.value)">
+      </div>
+
+      <script>
+        function kosong() {
+          document.getElementById("nilai").value = '';
+        }
+
+        function ketik1() {
+          nilx = document.getElementById("nilx").value;
+          nilx = nilx + '1';
+        }
+
+        function tambah() {
+          var nilx = parseInt(document.getElementById("nilx").value);
+          var nily = parseInt(document.getElementById("nilx").value);
+          var jumlah = nilx + nilx;
+              document.getElementById("hasil").innerHTML = jumlah;
+        }
+
+        function kurang() {
+            var nilx = parseInt(document.getElementById("nilx").value);
+            var nily = parseInt(document.getElementById("nily").value);
+            var jumlah = nilx - nilx;
+                document.getElementById("hasil").innerHTML = jumlah;
+        }
+
+        function kali() {
+          var nilx = parseInt(document.getElementById("nilx").value);
+          var nily = parseInt(document.getElementById("nily").value);
+          var jumlah = nilx * nily;
+              document.getElementById("hasil").innerHTML = jumlah;
+        }
+
+        function bagi() {
+          var nilx = parseInt(document.getElementById("nilx").value);
+          var nily = parseInt(document.getElementById("nily").value);
+          var jumlah = nilx / nilx;
+              document.getElementById("hasil").innerHTML = jumlah;
+        }
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+  </body>
+</html>
